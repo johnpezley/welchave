@@ -3,33 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Welch Ave. Station</title>
     <style>
+      :root {
+        --primary-color: #d97706;
+        --primary-hover: #b45309;
+        --bg-dark: #121212;
+        --bg-card: #1e1e1e;
+        --text-light: #f3f4f6;
+        --text-muted: #9ca3af;
+        --accent: #78350f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       html, body {
         margin: 0;
         width: 100%;
-        height: 100%;
-        background: #ffffff;
+        min-height: 100%;
+        background: var(--bg-dark);
+        color: var(--text-light);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
       body {
         min-height: 100vh;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(18, 18, 18, 0.95);
+        border-bottom: 1px solid #333;
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      main {
+        padding-top: 80px;
+      }
+
+      .hero {
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+          url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80')
+            no-repeat center center / cover;
       }
 
-      h1 {
+      .hero-content {
+        max-width: 900px;
+        padding: 2rem;
+      }
+
+      .hero h1 {
         margin: 0;
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
         letter-spacing: 0.05em;
-        color: #000000;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+
+      .hero h1 span {
+        color: var(--primary-color);
+      }
+
+      .hero p {
+        margin: 1rem auto 2rem;
+        max-width: 620px;
+        color: var(--text-muted);
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 0.85rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--primary-hover);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .nav-container {
+          justify-content: center;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Home</h1>
+    <header>
+      <div class="nav-container">
+        <a href="#home" class="logo">Welch Ave. Station</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#hours">Hours &amp; Location</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#selection">Selection</a></li>
+          <li><a href="#games">Games &amp; TVs</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Welcome to <span>Welch Ave. Station</span></h1>
+          <p>
+            A Campustown staple in Ames, Iowa for over 30 years. Quality glass,
+            great drinks, and the best atmosphere.
+          </p>
+          <a href="#specials" class="btn">View Daily Specials</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
