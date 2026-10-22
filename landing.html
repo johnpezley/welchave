@@ -127,16 +127,17 @@
         }
 
         .dog-wrap {
-            margin-top: 2rem;
             display: flex;
             justify-content: center;
+            margin-top: 2rem;
         }
 
-        .dog-art {
+        .dog-image {
             width: min(260px, 40vw);
             height: auto;
             display: block;
             filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.2));
+            background: transparent;
         }
 
         /* Section Layouts */
@@ -233,7 +234,7 @@
             .nav-links {
                 display: none;
             }
-            .dog-art {
+            .dog-image {
                 width: min(200px, 52vw);
             }
         }
@@ -262,16 +263,8 @@
             <p>A Campustown staple in Ames, Iowa for over 30 years. Quality glass, great drinks, and the best atmosphere.</p>
             <a href="#specials" class="btn">View Daily Specials</a>
 
-            <div class="dog-wrap" aria-label="Dog illustration">
-                <svg class="dog-art" viewBox="0 0 240 140" role="img" aria-label="Dog silhouette">
-                    <g fill="#FFFFFF">
-                        <path d="M62 95c-18-3-31-18-31-36 0-20 16-36 37-36 12 0 23 5 31 13l18 17 18-15c10-8 22-12 34-12 18 0 34 8 45 23 8 11 10 21 7 31-3 10-12 17-23 18-10 1-20-4-30-12-8-7-16-10-24-9l-18 2-9 17c-5 9-13 13-22 13h-4c-10 0-18-4-23-11l-7-11-8 5c-3 2-7 3-11 3z"/>
-                        <path d="M49 39c-10 0-18 8-18 18v11c0 10 8 18 18 18h6l2-47h-8z"/>
-                        <path d="M101 28c-6 0-10 4-10 10v14h19V33c0-3-2-5-9-5z"/>
-                        <path d="M160 22c-7 0-13 6-13 13v20h31V35c0-8-6-13-18-13z"/>
-                        <path d="M188 15c-7 0-13 5-16 12l-22 46h20l16-28 17 28h22l-28-58c-2-3-6-6-9-6z"/>
-                    </g>
-                </svg>
+            <div class="dog-wrap">
+                <img src="wlechavedog.png" alt="Welch Ave dog" class="dog-image">
             </div>
         </div>
     </section>
