@@ -6,13 +6,11 @@
     <title>Welch Ave. Station</title>
     <style>
       :root {
-        --primary-color: #d97706;
-        --primary-hover: #b45309;
-        --bg-dark: #121212;
-        --bg-card: #1e1e1e;
-        --text-light: #f3f4f6;
-        --text-muted: #9ca3af;
-        --accent: #78350f;
+        --bg: #000000;
+        --panel: #111111;
+        --text: #f5f5f5;
+        --muted: #d1d5db;
+        --accent: #d97706;
       }
 
       * {
@@ -23,28 +21,25 @@
         margin: 0;
         width: 100%;
         min-height: 100%;
-        background: var(--bg-dark);
-        color: var(--text-light);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       body {
         min-height: 100vh;
       }
 
-      header {
-        position: fixed;
+      nav {
+        position: sticky;
         top: 0;
-        left: 0;
         width: 100%;
-        background-color: rgba(18, 18, 18, 0.95);
+        background: rgba(0, 0, 0, 0.9);
         border-bottom: 1px solid #333;
-        backdrop-filter: blur(5px);
-        z-index: 1000;
       }
 
-      .nav-container {
-        max-width: 1200px;
+      .nav-inner {
+        max-width: 1100px;
         margin: 0 auto;
         padding: 1rem 2rem;
         display: flex;
@@ -52,126 +47,60 @@
         align-items: center;
       }
 
-      .logo {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-
       .nav-links {
-        list-style: none;
         display: flex;
+        list-style: none;
         gap: 2rem;
         margin: 0;
         padding: 0;
       }
 
       .nav-links a {
-        color: var(--text-light);
+        color: var(--text);
         text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
+        font-weight: 600;
       }
 
       .nav-links a:hover {
-        color: var(--primary-color);
+        color: var(--accent);
       }
 
       main {
-        padding-top: 80px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 2rem 2rem;
       }
 
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-          url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80')
-            no-repeat center center / cover;
-      }
-
-      .hero-content {
-        max-width: 900px;
+      .content {
+        background: var(--panel);
+        border: 1px solid #222;
+        border-radius: 10px;
         padding: 2rem;
       }
 
-      .hero h1 {
+      p {
         margin: 0;
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        color: #ffffff;
-        text-transform: uppercase;
-      }
-
-      .hero h1 span {
-        color: var(--primary-color);
-      }
-
-      .hero p {
-        margin: 1rem auto 2rem;
-        max-width: 620px;
-        color: var(--text-muted);
-        font-size: 1.2rem;
+        color: var(--muted);
+        font-size: 1.25rem;
         line-height: 1.6;
-      }
-
-      .btn {
-        display: inline-block;
-        background-color: var(--primary-color);
-        color: #fff;
-        padding: 0.85rem 2rem;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 700;
-        text-transform: uppercase;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: var(--primary-hover);
-      }
-
-      @media (max-width: 768px) {
-        .nav-links {
-          display: none;
-        }
-
-        .nav-container {
-          justify-content: center;
-        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="nav-container">
-        <a href="#home" class="logo">Welch Ave. Station</a>
+    <nav>
+      <div class="nav-inner">
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#hours">Hours &amp; Location</a></li>
-          <li><a href="#specials">Specials</a></li>
-          <li><a href="#selection">Selection</a></li>
-          <li><a href="#games">Games &amp; TVs</a></li>
+          <li><a href="#landing">Landing</a></li>
+          <li><a href="#ads">Ads</a></li>
         </ul>
       </div>
-    </header>
+    </nav>
 
     <main>
-      <section id="home" class="hero">
-        <div class="hero-content">
-          <h1>Welcome to <span>Welch Ave. Station</span></h1>
-          <p>
-            A Campustown staple in Ames, Iowa for over 30 years. Quality glass,
-            great drinks, and the best atmosphere.
-          </p>
-          <a href="#specials" class="btn">View Daily Specials</a>
-        </div>
-      </section>
+      <div class="content">
+        <p>this is our webstie</p>
+      </div>
     </main>
   </body>
 </html>
