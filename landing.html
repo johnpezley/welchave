@@ -50,6 +50,33 @@
             padding: 1rem 2rem;
         }
 
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .return-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.55rem 1rem;
+            background-color: rgba(27, 29, 137, 0.18);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .return-btn:hover {
+            background-color: rgba(27, 29, 137, 0.35);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -237,6 +264,16 @@
             .dog-image {
                 width: min(200px, 52vw);
             }
+            .nav-left {
+                gap: 0.75rem;
+            }
+            .return-btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            .logo {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -245,7 +282,10 @@
     <!-- Header & Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Welch Ave. Station</a>
+            <div class="nav-left">
+                <a href="index.html" class="return-btn">← Return</a>
+                <a href="#" class="logo">Welch Ave. Station</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#hours">Hours & Location</a></li>
