@@ -1,379 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welch Ave. Station | Campustown Nightclub & Bar | Ames, IA</title>
-    <style>
-        /* CSS Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #1b1d89;
-            --primary-hover: #14196b;
-            --bg-dark: #121212;
-            --bg-card: #1e1e1e;
-            --text-light: #f3f4f6;
-            --text-muted: #9ca3af;
-            --accent: #1b1d89;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: rgba(18, 18, 18, 0.95);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-            backdrop-filter: blur(5px);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .return-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.55rem 1rem;
-            background-color: rgba(27, 29, 137, 0.18);
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .return-btn:hover {
-            background-color: rgba(27, 29, 137, 0.35);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-1px);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 85vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6rem 1rem 2rem;
-            margin-top: 60px;
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary-color);
-        }
-
-        .hero-content p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-            color: var(--text-muted);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 0.75rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .dog-wrap {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .dog-image {
-            width: min(260px, 40vw);
-            height: auto;
-            display: block;
-            filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.2));
-            background: transparent;
-        }
-
-        /* Section Layouts */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid var(--primary-color);
-            display: table;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Hours & Info Grid */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background-color: var(--bg-card);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .hours-list {
-            list-style: none;
-        }
-
-        .hours-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #2a2a2a;
-        }
-
-        /* Highlights / Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .feature-box {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid #333;
-        }
-
-        .feature-box h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0a0a0a;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid #222;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive design adjustments */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            .nav-links {
-                display: none;
-            }
-            .dog-image {
-                width: min(200px, 52vw);
-            }
-            .nav-left {
-                gap: 0.75rem;
-            }
-            .return-btn {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.8rem;
-            }
-            .logo {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welch Ave. Station | No Cover Campustown Bar in Ames, IA</title>
+  <meta name="description" content="No cover charge all night and the cheapest regular prices at Campustown bars. Daily specials, free pool Monday through Wednesday, darts, big-screen sports and Pizza Pit you can order at the bar. 207 Welch Ave., Ames, IA.">
+  <meta property="og:title" content="Welch Ave. Station: No cover. No catch.">
+  <meta property="og:description" content="Campustown's lowest regular prices, a deal every night and free pool Monday through Wednesday. 207 Welch Ave., Ames.">
+  <meta property="og:image" content="images/ads/welch-ad-1200x628.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Libre+Franklin:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="return-btn">← Return</a>
-                <a href="#" class="logo">Welch Ave. Station</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#hours">Hours & Location</a></li>
-                <li><a href="#specials">Specials</a></li>
-                <li><a href="#selection">Selection</a></li>
-                <li><a href="#games">Games & TVs</a></li>
-            </ul>
+  <!-- Thin class-project bar so graders can get back to the project pages -->
+  <div class="demo-bar">
+    <div class="container">
+      <span>Class project demo: the landing page our display ads link to.</span>
+      <span><a href="index.html">← Return home</a> &nbsp;·&nbsp; <a href="ads.html">See the ads</a></span>
+    </div>
+  </div>
+
+  <header class="bar-nav">
+    <div class="container">
+      <a class="brand" href="#top">
+        <img src="images/dog-white.png" alt="" width="56" height="33">
+        <span>Welch Ave. Station</span>
+      </a>
+      <nav aria-label="Bar">
+        <ul class="nav-links">
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#game-day">Game Day</a></li>
+          <li><a href="#menu">Food</a></li>
+          <li><a href="#why-welch">Pool &amp; Games</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a class="call" href="tel:+15152922334" data-track="call">Call (515) 292-2334</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="stripe" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- HERO: same headline, photo and button as the display ads -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="copy">
+          <div class="banner"><strong>WELCH AVE. STATION</strong><span>— A Drinking Establishment —</span></div>
+          <div class="eyebrow" style="color: var(--gold)">Campustown, Ames · 32+ years</div>
+          <h1 class="display h1">No cover.<br><span class="gold">No catch.</span></h1>
+          <p>Campustown's lowest regular prices, a deal every night of the week, free pool Monday through Wednesday, the game on the big screens, and Pizza Pit you can order right at the bar.</p>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="#specials" data-track="hero_specials">See tonight's specials</a>
+            <a class="btn btn-outline" href="#menu">Pizza Pit menu</a>
+          </div>
+          <p class="fine">Open today until 2 a.m. · 21+ · ID checked at the door</p>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to <span>Welch Ave. Station</span></h1>
-            <p>A Campustown staple in Ames, Iowa for over 30 years. Quality glass, great drinks, and the best atmosphere.</p>
-            <a href="#specials" class="btn">View Daily Specials</a>
-
-            <div class="dog-wrap">
-                <img src="wlechavedog.png" alt="Welch Ave dog" class="dog-image">
-            </div>
+        <div class="photo">
+          <img src="images/bartender.jpg" alt="A Welch Ave. Station bartender in a blue polo handing a customer a drink" width="1325" height="1020">
+          <div class="patch" role="img" aria-label="Zero dollar cover charge every night, except select holidays">
+            <div><b>$0</b><small>Cover charge<br>every night*</small></div>
+          </div>
         </div>
+      </div>
+    </section>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <!-- SPECIALS: day picker -->
+    <section id="specials" class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Specials</div>
+          <h2 class="display h2" style="color: var(--wood)">A deal every night of the week.</h2>
+          <p class="lead">Our regular prices are the lowest in Campustown, and there's no cover any night (except select holidays). Pick a day.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Day of the week" id="day-tabs"></div>
+
+        <div class="specials-row">
+          <div class="letterboard" role="tabpanel" id="day-panel" aria-live="polite">
+            <!-- Filled in by script.js. Fallback for no JavaScript: -->
+            <noscript>
+              <div class="day">This week</div>
+              <ul>
+                <li>Mon: $6 non-craft pitchers, free pool before &amp; after league</li>
+                <li>Tue: $1.50 Busch Light &amp; High Life bottles, free pool all day</li>
+                <li>Wed: $1.50 domestic pints, free pool until 8 p.m.</li>
+                <li>Thu: $5.25 top-shelf doubles</li>
+                <li>Fri: $4 Long Islands &amp; daiquiris</li>
+                <li>Sat: $7.50 non-craft pitchers until 8 p.m.</li>
+                <li>Sun: S.I.N., employee prices for service workers</li>
+              </ul>
+            </noscript>
+          </div>
+          <div class="specials-side">
+            <div class="note"><strong>Open <span id="day-hours">tonight until 2 a.m.</span></strong><br>21+ · ID checked at the door</div>
+            <div class="note"><strong>Happy hour</strong> every day from open to 8 p.m., and all day Sunday: $7 non-craft pitchers, $2.25 non-craft pints and discounts on almost everything.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Hours & Location Section -->
-    <section id="hours">
-        <h2 class="section-title">Visit & Hours</h2>
-        <div class="info-grid">
-            <div class="card">
-                <h3>Opening Hours</h3>
-                <ul class="hours-list">
-                    <li><span>Monday – Thursday:</span> <span>4:00 PM – 2:00 AM</span></li>
-                    <li><span>Friday:</span> <span>1:00 PM – 2:00 AM</span></li>
-                    <li><span>Saturday:</span> <span>11:00 AM – 2:00 AM</span></li>
-                    <li><span>Sunday:</span> <span>Noon – 2:00 AM</span></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Location & Contact</h3>
-                <p><strong>Address:</strong><br>207 Welch Ave., Ames, IA 50014<br>(In the heart of Campustown)</p>
-                <p style="margin-top: 1.5rem;"><strong>Phone:</strong><br>(515) 292-2334</p>
-                <p style="margin-top: 1.5rem;"><em>No cover charge most nights and friendly table service available!</em></p>
-            </div>
+    <!-- GAME DAY -->
+    <section id="game-day" class="section wood game-day on-dark">
+      <div class="container">
+        <div class="copy">
+          <div class="eyebrow">Saturdays in Campustown</div>
+          <h2 class="display h2">Game day<br>starts at 11.</h2>
+          <p>Doors open at 11 a.m. on Saturdays. Catch the game on the big screens, grab daytime pitchers before 8, and order Pizza Pit without leaving your stool.</p>
+          <div class="btn-row"><button class="btn btn-gold" type="button" data-pick-day="6">See Saturday specials</button></div>
         </div>
+        <div class="letterboard" aria-label="Saturday specials">
+          <div><span>Till 8:</span> $7.50 non-craft pitchers</div>
+          <div><span>Till 8:</span> $2.75 non-craft pints</div>
+          <div><span>All day:</span> $3.25 margaritas</div>
+          <div><span>All day:</span> $3.25 Bloody Marys</div>
+          <div><span>All day:</span> $4 daiquiris</div>
+        </div>
+      </div>
+    </section>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <!-- FOOD: the Pizza Pit menu as real text, not a PDF -->
+    <section id="menu" class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Food &amp; snacks</div>
+          <h2 class="display h2" style="color: var(--wood)">Pizza Pit, right at the bar.</h2>
+          <p class="lead">Order fresh Pizza Pit at the bar or from your server. Here's the menu, no PDF required.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Build your own pizza</h3>
+            <div class="body">
+              <dl>
+                <div class="row"><dt>10" small</dt><dd>$9.29</dd></div>
+                <div class="row"><dt>12" medium</dt><dd>$11.99</dd></div>
+                <div class="row"><dt>14" large</dt><dd>$14.29</dd></div>
+                <div class="row"><dt>16" X-large</dt><dd>$15.89</dd></div>
+              </dl>
+              <p class="fine">Toppings from $1.59. Regular, thin or thick crust, or gluten-free (12" only). Order two of the same size as Pizza Twins and save.</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <h3>Specialty pizzas</h3>
+            <div class="body">
+              <dl><div class="row"><dt>10" to 16"</dt><dd>$14.49–$23.99</dd></div></dl>
+              <p>Traditional Deluxe · Garden Party · Bacon Onion Cheeseburger · Hawaiian · Tangy BBQ · Tasty Taco · 4 Alarm Special · Mac n Cheese · Super Meat Sampler · Sausage Mushroom Melt · Chicken Bacon Ranch · BLT Special</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <h3>Chicken dippers</h3>
+            <div class="body">
+              <table class="dippers">
+                <thead><tr><th scope="col">Item</th><th scope="col" class="num">Sm</th><th scope="col" class="num">Med</th><th scope="col" class="num">Lg</th></tr></thead>
+                <tbody>
+                  <tr><td>Wings &amp; drummies</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
+                  <tr><td>Inferno wings</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
+                  <tr><td>Boneless wings</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
+                  <tr><td>Popcorn chicken bites</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
+                  <tr><td>Just drummies</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
+                  <tr><td>Paddles</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
+                  <tr><td>Chicken tenders</td><td class="num">$10.79</td><td class="num">$14.09</td><td class="num">$17.79</td></tr>
+                  <tr><td>Buffalo chicken tenders</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
+                </tbody>
+              </table>
+              <p class="fine">Sauces: ranch, zesty Dijon, tangy BBQ, hot, blue cheese, sweet &amp; sour, honey mustard or pizza.</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <h3>Toasted sandwiches</h3>
+            <div class="body">
+              <dl><div class="row"><dt>12" whole / 6" half</dt><dd>$9.44 / $4.91</dd></div></dl>
+              <p>Ham &amp; Cheese · Ham &amp; Swiss · Roast Beef · Pepperoni Ham · Classic Combo · Ham Reuben · Meatball · Turkey &amp; Cheese · Turkey Bacon Cheddar · Vegetarian</p>
+              <p class="fine">On a French loaf with a pickle spear and chips.</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <h3>Appetizers</h3>
+            <div class="body">
+              <dl>
+                <div class="row"><dt>Garlic bread</dt><dd>$3.88</dd></div>
+                <div class="row"><dt>Cheese bread</dt><dd>$5.14</dd></div>
+                <div class="row"><dt>Garden salad</dt><dd>$5.19</dd></div>
+                <div class="row"><dt>Bosco cheese sticks (2 / 4 / 8)</dt><dd>$4.09–$10.89</dd></div>
+                <div class="row"><dt>Pit Sticks (12" / 14")</dt><dd>$10.99 / $12.99</dd></div>
+                <div class="row"><dt>Cheese balls</dt><dd>$7.49–$16.49</dd></div>
+                <div class="row"><dt>Stuffed jalapeños</dt><dd>$7.49–$16.49</dd></div>
+                <div class="row"><dt>Mozzarella sticks</dt><dd>$7.49–$16.49</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="menu-card dark">
+            <h3>Bar snacks</h3>
+            <div class="body">
+              <p>Popcorn · Chips &amp; salsa · Nuts · Gardetto's Snack-ens · Potato chips · Reese's Peanut Butter Cups · Snickers · Twix</p>
+              <p class="fine">Ask the bartender. Also available from Pizza Pit: the 20" XXL pizza and BBQ chicken or beef pizza.</p>
+            </div>
+          </article>
+        </div>
+        <p class="small" style="margin-top: 16px">Pizza Pit prices from Pizza Pit's Ames menu, plus tax and subject to change. Pizza Pit is a separate business.</p>
+      </div>
     </section>
 
-    <!-- Highlights Section -->
-    <section id="selection" style="background-color: #161616;">
-        <h2 class="section-title">The Experience</h2>
-        <div class="features-grid">
-            <div class="feature-box">
-                <h4>Quality Glassware</h4>
-                <p>All beer, drinks, and shots are served strictly in quality glass containers. No plastic here!</p>
-            </div>
-            <div class="feature-box">
-                <h4>Massive TVs</h4>
-                <p>Catch all major sporting events and Iowa State games across multiple HD screens, including big setups.</p>
-            </div>
-            <div class="feature-box">
-                <h4>Daily Happy Hours</h4>
-                <p>Enjoy low prices, daily specials, and special discount windows from open until 8 PM and all day Sunday.</p>
-            </div>
+    <!-- WHY WELCH -->
+    <section id="why-welch" class="section bg-night on-dark">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Rack 'em up</div>
+          <h2 class="display h2">Big screens. Free pool. Room to breathe.</h2>
         </div>
+        <div class="grid">
+          <div class="card card-top">
+            <h3>Room to breathe</h3>
+            <p>We hold nearly 200 people, and that's all we let in. IDs are checked at the door, so it's a real 21+ crowd.</p>
+          </div>
+          <div class="card card-top">
+            <h3>Game on, pool's free</h3>
+            <p>Big-screen TVs give everyone a view of the game. Four pool tables (free Monday through Wednesday), electronic darts, pinball, foosball and Buck Hunter.</p>
+          </div>
+          <div class="card card-top">
+            <h3>Real glass, real bar</h3>
+            <p>Beer, drinks and shots come in real glassware, never plastic. Owned longer than any other bar in Campustown: 32+ years.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Games & Entertainment -->
-    <section id="games">
-        <h2 class="section-title">Fun & Games</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
-                Looking for something to do while enjoying a drink? We offer a variety of entertainment options to keep the energy high:
-            </p>
-            <p style="font-size: 1rem; line-height: 2;">
-                🎱 Four Well-Kept Pool Tables &nbsp;|&nbsp;
-                🎯 Electronic Dart Boards &nbsp;|&nbsp;
-                🕹️ Pinball & Arcade Machines &nbsp;|&nbsp;
-                ⚽ Foosball & Buck Hunter
-            </p>
+    <!-- SUNDAY S.I.N. -->
+    <section id="sunday" class="section bg-gold sin">
+      <div class="container">
+        <div class="copy">
+          <div class="eyebrow">Sunday S.I.N. · Service Industry Night</div>
+          <h2 class="display h2">Work for tips?<br><span class="blue">Sundays are yours.</span></h2>
+          <p>Employee prices all day for bartenders, servers and everyone else who works for tips. Happy-hour prices all day for everybody else.</p>
         </div>
+        <button class="btn btn-night" type="button" data-pick-day="0">See Sunday specials</button>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; <span id="year"></span> Welch Ave. Station. All rights reserved.</p>
-        <p>207 Welch Ave., Ames, IA 50014 | (515) 292-2334</p>
-    </footer>
+    <!-- VISIT -->
+    <section id="visit" class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="display h2" style="color: var(--wood)">Look for the dog on the wall.</h2>
+        </div>
+        <div class="find-photo">
+          <img src="images/mural.jpg" alt="The Welch Ave. Station dog mural painted on the side of the building at 207 Welch Ave." width="1360" height="1020" loading="lazy">
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Find us</h3>
+            <p>207 Welch Ave.<br>Ames, IA 50014, in the heart of Campustown</p>
+            <div><a class="btn btn-gold" href="https://maps.google.com/?q=207+Welch+Ave+Ames+IA+50014" target="_blank" rel="noopener" data-track="directions">Get directions</a></div>
+          </div>
+          <div class="card">
+            <h3>Hours</h3>
+            <dl class="hours">
+              <dt>Mon–Thu</dt><dd>4 p.m.–2 a.m.</dd>
+              <dt>Friday</dt><dd>1 p.m.–2 a.m.</dd>
+              <dt>Saturday</dt><dd>11 a.m.–2 a.m.</dd>
+              <dt>Sunday</dt><dd>Noon–2 a.m.</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>Call</h3>
+            <a class="phone" href="tel:+15152922334" data-track="call">(515) 292-2334</a>
+            <p>Group rates and reservations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  <div class="stripe" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand-line">
+        <img src="images/dog-white.png" alt="" width="60" height="35">
+        <div><strong>Welch Ave. Station</strong><br>207 Welch Ave., Ames, IA 50014 · <a href="tel:+15152922334">(515) 292-2334</a></div>
+      </div>
+      <div>21+ only · Drink responsibly · *No cover except select holidays</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,106 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welch Ave. Station</title>
-    <style>
-      :root {
-        --bg: #000000;
-        --panel: #111111;
-        --text: #f5f5f5;
-        --muted: #d1d5db;
-        --accent: #d97706;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welch Ave. Station | Digital Marketing Project</title>
+  <meta name="description" content="Our Fall 2026 Digital Marketing project for Welch Ave. Station in Ames, Iowa: a full website audit, a display ad campaign and a new landing page.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Libre+Franklin:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html, body {
-        margin: 0;
-        width: 100%;
-        min-height: 100%;
-        background: var(--bg);
-        color: var(--text);
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      body {
-        min-height: 100vh;
-      }
-
-      nav {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        border-bottom: 1px solid #333;
-      }
-
-      .nav-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav-links a {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .nav-links a:hover {
-        color: var(--accent);
-      }
-
-      main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 4rem 2rem 2rem;
-      }
-
-      .content {
-        background: var(--panel);
-        border: 1px solid #222;
-        border-radius: 10px;
-        padding: 2rem;
-      }
-
-      p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1.25rem;
-        line-height: 1.6;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-inner">
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/dog-white.png" alt="" width="56" height="33">
+        <span>Welch Ave. Station<small>Digital Marketing Project</small></span>
+      </a>
+      <nav aria-label="Project">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="landing.html">Landing</a></li>
           <li><a href="ads.html">Ads</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
+  </header>
+  <div class="stripe" aria-hidden="true"></div>
 
-    <main>
-      <div class="content">
-        <p>this is our webstie</p>
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="copy">
+          <div class="banner"><strong>WELCH AVE. STATION</strong><span>— A Drinking Establishment —</span></div>
+          <div class="eyebrow" style="color: var(--gold)">Digital Marketing · Ivy College of Business · Fall 2026</div>
+          <h1 class="display h1" style="font-size: clamp(36px, 5.6vw, 68px)">A great bar with<br><span class="gold">a broken front door.</span></h1>
+          <p class="lead">Welch Ave. Station has been a Campustown staple for more than 32 years, but its website hasn't kept up. This semester we audited the site, then built a display ad campaign and a new landing page to fix what we found.</p>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="ads.html">See the ad campaign</a>
+            <a class="btn btn-outline" href="landing.html">View the landing page</a>
+          </div>
+        </div>
+        <div class="art">
+          <img src="images/mural.jpg" alt="The Welch Ave. Station dog mural on the brick wall of the bar at 207 Welch Ave. in Ames" width="1360" height="1020" style="object-position: 62% 10%">
+        </div>
       </div>
-    </main>
-  </body>
+    </section>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="section bg-white">
+      <div class="container grid-2">
+        <div class="section-head" style="margin: 0">
+          <div class="eyebrow">Executive summary</div>
+          <h2 class="display h2" style="color: var(--royal)">What we did this semester.</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; font-size: 17px">
+          <p style="margin: 0"><strong>The business.</strong> Welch Ave. Station is a bar at 207 Welch Ave. in Ames, owned longer than any other bar in Campustown. Its strengths are real: no cover charge any night, the lowest regular prices in Campustown, specials every day, free pool, darts, big-screen sports, a capacity limit of about 200 for safety, and Pizza Pit you can order at the bar.</p>
+          <p style="margin: 0"><strong>The audit.</strong> Our five-person team reviewed the Home, Location, Specials and Food pages for user interface, user experience, on-site SEO and performance. The site loads fast and is fully indexed, but it looks outdated, isn't served over HTTPS, doesn't fit phone screens, hides its phone number on most pages, and buries the Pizza Pit menu in a hard-to-read PDF.</p>
+          <p style="margin: 0"><strong>The campaign.</strong> We turned the audit into a "No cover. No catch." display campaign aimed at 21+ Iowa State students, sports fans and local service workers: one creative in four standard sizes, Ames-only targeting, and a $600, four-week budget built from published benchmarks.</p>
+          <p style="margin: 0"><strong>The landing page.</strong> Every ad links to a new, mobile-friendly landing page that matches the ad word for word and applies our audit's recommendations, from clear calls to action to a readable menu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIT FINDINGS -->
+    <section class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Part 1 · Website audit</div>
+          <h2 class="display h2" style="color: var(--royal)">What we found on welchave.com.</h2>
+          <p class="lead">We evaluated four pages (Home, Location, Specials and Food) from four angles.</p>
+        </div>
+        <div class="grid">
+          <article class="card card-top">
+            <h3>User interface</h3>
+            <div class="who">Jack Norby</div>
+            <p>The only consistent element is the bright blue background. Buttons, images, trust symbols and even the phone number are missing from most pages, and the header with the bar's name and dog disappears after the home page. The one photo looks like stock.</p>
+          </article>
+          <article class="card card-top">
+            <h3>User experience</h3>
+            <div class="who">Jose Velazquez &amp; Carlos Rodríguez</div>
+            <p>All five of us finished three visitor tasks with the left sidebar, so the basic navigation works. But the Pizza Pit menu was the slowest to reach and hard to read as an embedded PDF, the Music page shows pasted developer code, and browsers flag the site as not secure.</p>
+          </article>
+          <article class="card card-top">
+            <h3>On-site SEO</h3>
+            <div class="who">Kaden Klein</div>
+            <p>Our five target keyword phrases already appear naturally, with no keyword stuffing, and every page is indexed. But there are no meta descriptions or canonical tags, the Home and Food pages have fewer than 100 words, and Google still indexes a Pizza Pit menu that's about 14 years old.</p>
+          </article>
+          <article class="card card-top">
+            <h3>Performance</h3>
+            <div class="who">John Pezley</div>
+            <p>Speed is a strength: every page scored high on Lighthouse for load time and SEO on both mobile and desktop. The gaps are no HTTPS, no mobile layout (pages are shrunk desktop versions), and low accessibility and best-practice scores.</p>
+          </article>
+        </div>
+
+        <h3 class="display h3" style="color: var(--royal); margin: 40px 0 16px">The audit by the numbers</h3>
+        <div class="stats">
+          <div class="stat"><b>3.85 s</b><span>Average time to find the address (1.2 clicks), the fastest task</span></div>
+          <div class="stat"><b>6.91 s</b><span>Average time to find Tuesday's specials (2.2 clicks)</span></div>
+          <div class="stat"><b>7.80 s</b><span>Average time to open the Pizza Pit menu (2.2 clicks), the slowest task</span></div>
+          <div class="stat"><b>99 / 93</b><span>Home page Lighthouse performance score, desktop / mobile (median of three tests)</span></div>
+          <div class="stat"><b>70</b><span>Lighthouse best-practices score on the home page, the lowest category</span></div>
+          <div class="stat"><b>No</b><span>Served over HTTPS, so browsers show a "Not Secure" warning on every page</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS -> WHAT WE BUILT -->
+    <section class="section bg-royal on-dark">
+      <div class="container grid-2">
+        <div class="section-head" style="margin: 0">
+          <div class="eyebrow">Our recommendations</div>
+          <h2 class="display h2">Rebuild it modern, mobile and <span class="gold">trustworthy.</span></h2>
+          <p class="lead">We recommended a full redesign that drives foot traffic from the website to the bar. Our landing page is a working first step.</p>
+        </div>
+        <div class="card">
+          <h3>Built into our landing page</h3>
+          <ul class="checks">
+            <li><span>Mobile-friendly, responsive layout</span></li>
+            <li><span>A navigation bar on every page</span></li>
+            <li><span>Served over HTTPS through GitHub Pages</span></li>
+            <li><span>Clear calls to action: specials, directions, call</span></li>
+            <li><span>Our five keyword phrases in real page text, plus meta descriptions</span></li>
+            <li><span>The Pizza Pit menu as readable text, not a PDF</span></li>
+            <li><span>Phone number and address on every screen</span></li>
+            <li><span>Alt text on every image and a valid HTML5 doctype</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPAIGN + LANDING -->
+    <section class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Part 2 · Display ad campaign</div>
+          <h2 class="display h2" style="color: var(--royal)">No cover. No catch.</h2>
+        </div>
+        <div class="grid-2">
+          <a href="ads.html" style="display: block">
+            <img src="images/ads/welch-ad-1200x628.png" srcset="images/ads/welch-ad-1200x628.png 1x, images/ads/welch-ad-1200x628@2x.png 2x" alt="The campaign's master ad: No cover. No catch. Welch Ave. Station" width="1200" height="628" loading="lazy" style="border-radius: 8px; box-shadow: 0 8px 24px rgba(15,26,46,.18)">
+          </a>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <p style="margin: 0">Goal: local brand awareness. Audience: 21+ Iowa State students, sports fans and Ames service-industry workers. Hook: "No cover. No catch." Budget: $600 over four weeks, projected at about 214,000 impressions and 1,100 clicks in the expected case.</p>
+            <p style="margin: 0">The ads run in four sizes, and every one links to the landing page with its own tracking tag.</p>
+            <div class="btn-row">
+              <a class="btn btn-blue" href="ads.html">Campaign details &amp; ads</a>
+              <a class="btn btn-gold" href="landing.html">Landing page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">The team</div>
+          <h2 class="display h2" style="color: var(--royal)">Who did what.</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Team member</th><th scope="col">Website audit</th></tr></thead>
+            <tbody>
+              <tr><td>Jack Norby</td><td>User interface audit</td></tr>
+              <tr><td>Jose Velazquez</td><td>User experience audit</td></tr>
+              <tr><td>Carlos Rodríguez</td><td>User experience audit</td></tr>
+              <tr><td>Kaden Klein</td><td>On-site SEO audit</td></tr>
+              <tr><td>John Pezley</td><td>Performance audit</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- END OF SEMESTER -->
+    <section class="section bg-bone">
+      <div class="container">
+        <div class="todo">
+          <div class="eyebrow">Coming at the end of the semester</div>
+          <h2 class="display h3" style="color: var(--royal)">Final results &amp; reflection</h2>
+          <p style="margin: 0">[Add our remaining assignments, final results and what we learned here before final grading.]</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="stripe" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand-line">
+        <img src="images/dog-white.png" alt="" width="60" height="35">
+        <div><strong>Welch Ave. Station</strong><br>Digital Marketing class project · Ivy College of Business · Fall 2026</div>
+      </div>
+      <div><a href="index.html">Home</a> · <a href="landing.html">Landing</a> · <a href="ads.html">Ads</a></div>
+    </div>
+  </footer>
+</body>
 </html>
