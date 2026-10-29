@@ -324,76 +324,40 @@ tr.highlight td { background: #FFF6DD !important; font-weight: 700; }
 .match figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .match img { border-radius: var(--radius); border: 1px solid var(--line); }
 
-/* ---------- Ads in place: sample publisher page (ads.html) ---------- */
-.slot-key {
-  list-style: none; margin: 0 0 24px; padding: 0;
-  display: grid; gap: 10px 24px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  font-size: 15px; color: var(--muted);
-}
-.slot-key li { border-left: 4px solid var(--gold); padding-left: 12px; }
-.slot-key b { display: block; color: var(--night); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+/* ---------- Ads placed on the Ads page itself (ads.html) ---------- */
+/* Leaderboard band under the page header */
+.ad-band { background: var(--white); border-bottom: 1px solid var(--line); padding: 14px 0 12px; }
+.ad-band .container { display: flex; justify-content: center; }
 
-.mock-browser {
-  border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--white);
-  box-shadow: 0 12px 36px rgba(15,26,46,.14);
-}
-.mock-bar { display: flex; align-items: center; gap: 14px; background: #E8E3D8; padding: 10px 14px; }
-.mock-dots { display: flex; gap: 6px; }
-.mock-dots i { width: 11px; height: 11px; border-radius: 50%; background: #C7BFAE; }
-.mock-url {
-  flex: 1; min-width: 0; background: var(--white); border-radius: 6px; padding: 5px 12px;
-  font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
+/* Content beside a 300px ad column, or a 160px rail */
+.with-ad { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+.with-rail { grid-template-columns: minmax(0, 1fr) 160px; }
+.ad-aside { position: sticky; top: 84px; }
 
-.mock-site { color: #222; padding-bottom: 32px; }
-.mock-head {
-  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px;
-  padding: 20px 28px 12px; border-bottom: 3px solid #222;
-}
-.mock-logo { font: 700 30px/1 Georgia, "Times New Roman", serif; letter-spacing: -0.5px; }
-.mock-logo small { display: block; margin-top: 6px; font: 400 12px var(--font-body); letter-spacing: 0; color: #777; }
-.mock-menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #555; }
-
-.mock-top { display: flex; justify-content: center; padding: 16px 28px; border-bottom: 1px solid #EEE; }
-.mock-body {
-  display: grid; grid-template-columns: minmax(0, 1fr) 300px 160px; gap: 28px;
-  align-items: start; padding: 24px 28px 0;
-}
-.mock-article { display: flex; flex-direction: column; gap: 12px; font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.65; }
-.mock-article p { margin: 0; }
-.mock-article h3 { font: 700 clamp(24px, 2.6vw, 32px)/1.15 Georgia, "Times New Roman", serif; }
-.mock-kicker { font: 700 12px var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: #B3261E; }
-.mock-byline { font: 13px var(--font-body); color: #777; }
-.mock-photo {
-  aspect-ratio: 16 / 9; border-radius: 4px; background: linear-gradient(135deg, #E9E9E9, #D6D6D6);
-  display: flex; align-items: center; justify-content: center;
-}
-.mock-photo span { font: 600 12px var(--font-body); letter-spacing: 2px; text-transform: uppercase; color: #999; }
-.mock-lines { display: flex; flex-direction: column; gap: 10px; }
-.mock-lines i { display: block; height: 10px; border-radius: 4px; background: #ECECEC; }
-
-.mock-side { display: flex; flex-direction: column; gap: 28px; }
-.mock-popular { border-top: 3px solid #222; padding-top: 10px; }
-.mock-popular ol { margin: 8px 0 0; padding-left: 20px; font: 15px/1.5 Georgia, serif; display: grid; gap: 8px; }
-.mock-rail { position: sticky; top: 84px; }
-
-.ad-slot { display: flex; flex-direction: column; align-items: center; gap: 5px; max-width: 100%; }
-.ad-slot .ad-label { font: 600 10px var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: #9A9A9A; }
-.ad-slot a { display: block; max-width: 100%; transition: transform .15s ease, box-shadow .15s ease; }
+.ad-slot { display: flex; flex-direction: column; align-items: center; gap: 5px; max-width: 100%; scroll-margin-top: 90px; }
+.ad-slot .ad-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #8A8A8A; }
+.ad-slot a { display: block; max-width: 100%; box-shadow: 0 6px 18px rgba(15,26,46,.16); transition: transform .15s ease, box-shadow .15s ease; }
 .ad-slot a:hover { transform: translateY(-2px); box-shadow: 0 0 0 3px var(--gold), 0 10px 24px rgba(15,26,46,.25); }
 .ad-size {
   font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-align: center;
   color: var(--royal); background: #FFF6DD; padding: 2px 8px; border-radius: 4px;
 }
 
-@media (max-width: 1060px) {
-  .mock-body { grid-template-columns: minmax(0, 1fr) 300px; }
-  .mock-rail { position: static; grid-column: 2; }
+/* Step 2: guide to where each ad runs */
+.slot-key {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
-@media (max-width: 720px) {
-  .mock-head, .mock-top { padding-left: 16px; padding-right: 16px; }
-  .mock-body { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 0; }
-  .mock-rail { grid-column: auto; }
+.slot-key a {
+  display: block; height: 100%; padding: 16px 18px; border: 1px solid var(--line); border-left: 6px solid var(--gold);
+  border-radius: var(--radius); background: var(--paper); color: var(--muted); font-size: 15px; text-decoration: none;
+}
+.slot-key a:hover { border-color: var(--royal); border-left-color: var(--gold); color: var(--night); }
+.slot-key b { display: block; margin-bottom: 4px; color: var(--royal); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .with-ad, .with-rail { grid-template-columns: minmax(0, 1fr); }
+  .ad-aside { position: static; display: flex; justify-content: center; }
 }
 
 /* Click-through flow (ads.html, Step 3) */
