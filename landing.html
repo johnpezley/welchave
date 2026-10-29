@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welch Ave. Station | No Cover Campustown Bar in Ames, IA</title>
-  <meta name="description" content="No cover charge all night and the cheapest regular prices at Campustown bars. Daily specials, free pool Monday through Wednesday, darts, big-screen sports and Pizza Pit you can order right at the bar. 207 Welch Ave., Ames, IA.">
+  <meta name="description" content="No cover charge and Campustown's lowest regular prices. A deal every night, free pool Mon–Wed and big-screen sports at 207 Welch Ave., Ames, IA.">
   <meta property="og:title" content="Welch Ave. Station: No cover. No catch.">
   <meta property="og:description" content="Campustown's lowest regular prices, a deal every night and free pool Monday through Wednesday. 207 Welch Ave., Ames.">
-  <meta property="og:image" content="welch-ad-1200x628.png">
+  <meta property="og:image" content="https://johnpezley.github.io/welchave/welch-ad-1200x628.png">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,25 +20,22 @@
   <!-- Thin class-project bar so graders can get back to the project pages -->
   <div class="demo-bar">
     <div class="container">
-      <span>Class project demo: the landing page our display ads link to.</span>
+      <span class="demo-note">Class project demo: the landing page our display ads link to.</span>
       <span><a href="index.html">← Return home</a> &nbsp;·&nbsp; <a href="ads.html">See the ads</a></span>
     </div>
   </div>
 
   <header class="bar-nav">
     <div class="container">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="Welch Ave. Station, back to top">
         <img src="dog-white.png" alt="" width="56" height="33">
         <span>Welch Ave. Station</span>
       </a>
       <nav aria-label="Bar">
         <ul class="nav-links">
           <li><a href="#specials">Specials</a></li>
-          <li><a href="#game-day">Game Day</a></li>
-          <li><a href="#menu">Food</a></li>
-          <li><a href="#why-welch">Pool &amp; Games</a></li>
           <li><a href="#visit">Visit</a></li>
-          <li><a class="call" href="tel:+15152922334" data-track="call">Call (515) 292-2334</a></li>
+          <li><a class="call" href="tel:+15152922334" data-track="call">Call<span class="call-num"> (515) 292-2334</span></a></li>
         </ul>
       </nav>
     </div>
@@ -57,7 +54,7 @@
           <p>Campustown's lowest regular prices, a deal every night of the week, free pool Monday through Wednesday, the game on the big screens, and Pizza Pit you can order right at the bar.</p>
           <div class="btn-row">
             <a class="btn btn-gold" href="#specials" data-track="hero_specials">See tonight's specials</a>
-            <a class="btn btn-outline" href="#menu">Pizza Pit menu</a>
+            <a class="btn btn-outline" href="#visit">Hours &amp; location</a>
           </div>
           <p class="fine">Open today until 2 a.m. · 21+ · ID checked at the door</p>
         </div>
@@ -106,149 +103,7 @@
       </div>
     </section>
 
-    <!-- GAME DAY -->
-    <section id="game-day" class="section wood game-day on-dark">
-      <div class="container">
-        <div class="copy">
-          <div class="eyebrow">Saturdays in Campustown</div>
-          <h2 class="display h2">Game day<br>starts at 11.</h2>
-          <p>Doors open at 11 a.m. on Saturdays. Catch the game on the big screens, grab daytime pitchers before 8, and order Pizza Pit without leaving your stool.</p>
-          <div class="btn-row"><button class="btn btn-gold" type="button" data-pick-day="6">See Saturday specials</button></div>
-        </div>
-        <div class="letterboard" aria-label="Saturday specials">
-          <div><span>Till 8:</span> $7.50 non-craft pitchers</div>
-          <div><span>Till 8:</span> $2.75 non-craft pints</div>
-          <div><span>All day:</span> $3.25 margaritas</div>
-          <div><span>All day:</span> $3.25 Bloody Marys</div>
-          <div><span>All day:</span> $4 daiquiris</div>
-        </div>
-      </div>
-    </section>
     <div class="stripe" aria-hidden="true"></div>
-
-    <!-- FOOD: the Pizza Pit menu as real text, not a PDF -->
-    <section id="menu" class="section bg-bone">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Food &amp; snacks</div>
-          <h2 class="display h2" style="color: var(--wood)">Pizza Pit, right at the bar.</h2>
-          <p class="lead">Order fresh Pizza Pit at the bar or from your server. Here's the menu, no PDF required.</p>
-        </div>
-
-        <div class="menu-grid">
-          <article class="menu-card">
-            <h3>Build your own pizza</h3>
-            <div class="body">
-              <dl>
-                <div class="row"><dt>10" small</dt><dd>$9.29</dd></div>
-                <div class="row"><dt>12" medium</dt><dd>$11.99</dd></div>
-                <div class="row"><dt>14" large</dt><dd>$14.29</dd></div>
-                <div class="row"><dt>16" X-large</dt><dd>$15.89</dd></div>
-              </dl>
-              <p class="fine">Toppings from $1.59. Regular, thin or thick crust, or gluten-free (12" only). Order two of the same size as Pizza Twins and save.</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <h3>Specialty pizzas</h3>
-            <div class="body">
-              <dl><div class="row"><dt>10" to 16"</dt><dd>$14.49–$23.99</dd></div></dl>
-              <p>Traditional Deluxe · Garden Party · Bacon Onion Cheeseburger · Hawaiian · Tangy BBQ · Tasty Taco · 4 Alarm Special · Mac n Cheese · Super Meat Sampler · Sausage Mushroom Melt</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <h3>Chicken dippers</h3>
-            <div class="body">
-              <table class="dippers">
-                <thead><tr><th scope="col">Item</th><th scope="col" class="num">Sm</th><th scope="col" class="num">Med</th><th scope="col" class="num">Lg</th></tr></thead>
-                <tbody>
-                  <tr><td>Wings &amp; drummies</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
-                  <tr><td>Inferno wings</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
-                  <tr><td>Boneless wings</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
-                  <tr><td>Popcorn chicken bites</td><td class="num">$10.49</td><td class="num">$14.29</td><td class="num">$17.99</td></tr>
-                  <tr><td>Just drummies</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
-                  <tr><td>Paddles</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
-                  <tr><td>Chicken tenders</td><td class="num">$10.79</td><td class="num">$14.09</td><td class="num">$17.79</td></tr>
-                  <tr><td>Buffalo chicken tenders</td><td class="num">$10.79</td><td class="num">$14.39</td><td class="num">$18.49</td></tr>
-                </tbody>
-              </table>
-              <p class="fine">Sauces: ranch, zesty Dijon, tangy BBQ, hot, blue cheese, sweet &amp; sour, honey mustard or pizza.</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <h3>Toasted sandwiches</h3>
-            <div class="body">
-              <dl><div class="row"><dt>12" whole / 6" half</dt><dd>$9.44 / $4.91</dd></div></dl>
-              <p>Ham &amp; Cheese · Ham &amp; Swiss · Roast Beef · Pepperoni Ham · Classic Combo · Ham Reuben · Meatball · Turkey &amp; Cheese · Turkey Bacon Cheddar · Vegetarian</p>
-              <p class="fine">On a French loaf with a pickle spear and chips.</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <h3>Appetizers</h3>
-            <div class="body">
-              <dl>
-                <div class="row"><dt>Garlic bread</dt><dd>$3.88</dd></div>
-                <div class="row"><dt>Cheese bread</dt><dd>$5.14</dd></div>
-                <div class="row"><dt>Garden salad</dt><dd>$5.19</dd></div>
-                <div class="row"><dt>Bosco cheese sticks (2 / 4 / 8)</dt><dd>$4.09–$10.89</dd></div>
-                <div class="row"><dt>Pit Sticks (12" / 14")</dt><dd>$10.99 / $12.99</dd></div>
-                <div class="row"><dt>Cheese balls</dt><dd>$7.49–$16.49</dd></div>
-                <div class="row"><dt>Stuffed jalapeños</dt><dd>$7.49–$16.49</dd></div>
-                <div class="row"><dt>Mozzarella sticks</dt><dd>$7.49–$16.49</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="menu-card dark">
-            <h3>Bar snacks</h3>
-            <div class="body">
-              <p>Popcorn · Chips &amp; salsa · Nuts · Gardetto's Snack-ens · Potato chips · Reese's Peanut Butter Cups · Snickers · Twix</p>
-              <p class="fine">Ask the bartender. Also available from Pizza Pit: the 20" XXL pizza and BBQ chicken or beef pizza.</p>
-            </div>
-          </article>
-        </div>
-        <p class="small" style="margin-top: 16px">Pizza Pit prices from Pizza Pit's Ames menu, plus tax and subject to change. Pizza Pit is a separate business.</p>
-      </div>
-    </section>
-
-    <!-- WHY WELCH -->
-    <section id="why-welch" class="section bg-night on-dark">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Rack 'em up</div>
-          <h2 class="display h2">Big screens. Free pool. Room to breathe.</h2>
-        </div>
-        <div class="grid">
-          <div class="card card-top">
-            <h3>Room to breathe</h3>
-            <p>We hold nearly 200 people, and that's all we let in. IDs are checked at the door, so it's a real 21+ crowd.</p>
-          </div>
-          <div class="card card-top">
-            <h3>Game on, pool's free</h3>
-            <p>Big-screen TVs give everyone a view of the game. Four pool tables (free Monday through Wednesday), electronic darts, pinball, foosball and Buck Hunter.</p>
-          </div>
-          <div class="card card-top">
-            <h3>Real glass, real bar</h3>
-            <p>Beer, drinks and shots come in real glassware, never plastic. Owned longer than any other bar in Campustown: 32+ years.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUNDAY S.I.N. -->
-    <section id="sunday" class="section bg-gold sin">
-      <div class="container">
-        <div class="copy">
-          <div class="eyebrow">Sunday S.I.N. · Service Industry Night</div>
-          <h2 class="display h2">Work for tips?<br><span class="blue">Sundays are yours.</span></h2>
-          <p>Employee prices all day for bartenders, servers and everyone else who works for tips. Happy-hour prices all day for everybody else.</p>
-        </div>
-        <button class="btn btn-night" type="button" data-pick-day="0">See Sunday specials</button>
-      </div>
-    </section>
 
     <!-- VISIT -->
     <section id="visit" class="section bg-bone">

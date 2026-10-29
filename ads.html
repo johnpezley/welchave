@@ -23,8 +23,8 @@
       <nav aria-label="Project">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="landing.html">Landing</a></li>
           <li><a href="ads.html" aria-current="page">Ads</a></li>
+          <li><a href="landing.html">Landing</a></li>
         </ul>
       </nav>
     </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="art">
           <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=1200x628">
-            <img src="welch-ad-1200x628.png" srcset="welch-ad-1200x628.png 1x, welch-ad-1200x628@2x.png 2x" alt="Master ad: No cover. No catch. Welch Ave. Station, Campustown's lowest regular prices and a deal every night." width="1200" height="628">
+            <img src="welch-ad-1200x628.png" srcset="welch-ad-1200x628.png 1x, welch-ad-1200x628@2x.png 2x" alt="Master ad: No cover. No catch. Welch Ave. Station, Campustown's lowest regular prices and a deal every night." width="1200" height="628" style="height: auto">
           </a>
         </div>
       </div>
@@ -159,49 +159,8 @@
       </div>
     </section>
 
-    <!-- THE ADS -->
-    <section id="ads" class="section bg-bone">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Step 2 · Ad design</div>
-          <h2 class="display h2" style="color: var(--royal)">One creative, four sizes.</h2>
-          <p class="lead">Click any ad to go to the landing page. Each link carries its own UTM tag, so we can see which size drives the most visits.</p>
-        </div>
-
-        <div class="ad-gallery">
-          <figure class="ad-item wide" style="margin: 0">
-            <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=728x90" style="width: 728px">
-              <img src="welch-ad-728x90.png" srcset="welch-ad-728x90.png 1x, welch-ad-728x90@2x.png 2x" alt="Leaderboard ad: No cover. No catch. Welch Ave. Station, Campustown's lowest regular prices, free pool Monday through Wednesday. See specials." width="728" height="90">
-            </a>
-            <figcaption>Leaderboard · 728 × 90</figcaption>
-          </figure>
-
-          <figure class="ad-item" style="margin: 0">
-            <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=300x250" style="width: 300px">
-              <img src="welch-ad-300x250.png" srcset="welch-ad-300x250.png 1x, welch-ad-300x250@2x.png 2x" alt="Medium rectangle ad: No cover. No catch. Campustown's lowest regular prices. Free pool Monday through Wednesday. See tonight's specials." width="300" height="250">
-            </a>
-            <figcaption>Medium rectangle · 300 × 250</figcaption>
-          </figure>
-
-          <figure class="ad-item" style="margin: 0">
-            <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=160x600" style="width: 160px">
-              <img src="welch-ad-160x600.png" srcset="welch-ad-160x600.png 1x, welch-ad-160x600@2x.png 2x" alt="Wide skyscraper ad: No cover. No catch. Welch Ave. Station. Campustown's lowest regular prices. Tonight's specials." width="160" height="600">
-            </a>
-            <figcaption>Wide skyscraper · 160 × 600</figcaption>
-          </figure>
-
-          <figure class="ad-item" style="margin: 0">
-            <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=300x600" style="width: 300px">
-              <img src="welch-ad-300x600.png" srcset="welch-ad-300x600.png 1x, welch-ad-300x600@2x.png 2x" alt="Half page ad: No cover. No catch. Welch Ave. Station. Campustown's lowest regular prices and a deal every night. Free pool Monday through Wednesday. See tonight's specials." width="300" height="600">
-            </a>
-            <figcaption>Half page · 300 × 600</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
     <!-- FINANCIAL ESTIMATES -->
-    <section id="budget" class="section bg-white">
+    <section id="budget" class="section bg-bone">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">Step 1 · Financial estimates</div>
@@ -230,25 +189,119 @@
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th scope="col">Scenario</th><th scope="col" class="num">CPM</th><th scope="col" class="num">CTR</th><th scope="col" class="num">Action rate</th><th scope="col" class="num">Impressions</th><th scope="col" class="num">Clicks</th><th scope="col" class="num">CPC</th><th scope="col" class="num">Actions</th></tr>
+              <tr><th scope="col">Scenario</th><th scope="col" class="num">CPM</th><th scope="col" class="num">CTR</th><th scope="col" class="num">Action rate</th><th scope="col" class="num">Impressions</th><th scope="col" class="num">Clicks</th><th scope="col" class="num">CPC</th><th scope="col" class="num">Actions</th><th scope="col" class="num">Cost per action</th></tr>
             </thead>
             <tbody>
-              <tr><td>Conservative</td><td class="num">$4.00</td><td class="num">0.46%</td><td class="num">0.89%</td><td class="num">150,000</td><td class="num">690</td><td class="num">$0.87</td><td class="num">6</td></tr>
-              <tr class="highlight"><td>Expected</td><td class="num">$2.80</td><td class="num">0.52%</td><td class="num">2.9%</td><td class="num">214,286</td><td class="num">1,114</td><td class="num">$0.54</td><td class="num">32</td></tr>
-              <tr><td>Optimistic</td><td class="num">$2.60</td><td class="num">0.58%</td><td class="num">5.0%</td><td class="num">230,769</td><td class="num">1,338</td><td class="num">$0.45</td><td class="num">67</td></tr>
+              <tr><td>Conservative</td><td class="num">$4.00</td><td class="num">0.46%</td><td class="num">0.89%</td><td class="num">150,000</td><td class="num">690</td><td class="num">$0.87</td><td class="num">6</td><td class="num">$97.70</td></tr>
+              <tr class="highlight"><td>Expected</td><td class="num">$2.80</td><td class="num">0.52%</td><td class="num">2.9%</td><td class="num">214,286</td><td class="num">1,114</td><td class="num">$0.54</td><td class="num">32</td><td class="num">$18.57</td></tr>
+              <tr><td>Optimistic</td><td class="num">$2.60</td><td class="num">0.58%</td><td class="num">5.0%</td><td class="num">230,769</td><td class="num">1,338</td><td class="num">$0.45</td><td class="num">67</td><td class="num">$8.97</td></tr>
             </tbody>
           </table>
         </div>
         <div class="grid-2" style="margin-top: 24px">
           <div class="card">
             <h3>Assumptions</h3>
-            <p><strong>Conservative</strong> assumes a $4.00 CPM, because tight 21+ local targeting usually costs more than the network average (our estimate). <strong>Expected</strong> uses the 2.9% landing-page action rate from the benchmark and a $2.80 CPM, which is realistic for a strong local display buy. <strong>Optimistic</strong> assumes more efficient placement and a conversion rate near competitor restaurant benchmarks.</p>
+            <p><strong>Conservative</strong> assumes a $4.00 CPM, because tight 21+ local targeting usually costs more than the network average (our estimate). <strong>Expected</strong> uses a 2.9% landing-page action rate, the midpoint of the 0.89% display and ~5% restaurant conversion benchmarks, and a $2.80 CPM, which is realistic for a strong local display buy. <strong>Optimistic</strong> assumes more efficient placement and a conversion rate near competitor restaurant benchmarks. Formulas: impressions = budget ÷ CPM × 1,000; clicks = impressions × CTR; actions = clicks × action rate; cost per action = budget ÷ actions.</p>
           </div>
           <div class="card">
             <h3>Sanity check</h3>
             <p>The expected cost per click ($0.54) lands right next to the $0.63 Google Display Network average, so the plan is realistic. At $150 a week, the expected case delivers about 53,600 impressions and 278 clicks per week, enough to build local awareness without overspending.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- THE ADS, shown in place on a sample publisher page -->
+    <section id="ads" class="section bg-white">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Step 2 · Ad design</div>
+          <h2 class="display h2" style="color: var(--royal)">One creative, four sizes.</h2>
+          <p class="lead">Here's how our four ads would look on a local news site in Ames. Click any ad to follow the same path a real visitor would, straight to our landing page.</p>
+        </div>
+
+        <ul class="slot-key" aria-label="Where each ad size runs">
+          <li><b>Leaderboard · 728 × 90</b> Across the top of the page</li>
+          <li><b>Medium rectangle · 300 × 250</b> Top of the sidebar</li>
+          <li><b>Half page · 300 × 600</b> Lower sidebar</li>
+          <li><b>Wide skyscraper · 160 × 600</b> Side rail that stays in view as you scroll</li>
+        </ul>
+
+        <div class="mock-browser">
+          <div class="mock-bar" aria-hidden="true">
+            <span class="mock-dots"><i></i><i></i><i></i></span>
+            <span class="mock-url">ameslocal.example/sports/game-day-guide</span>
+          </div>
+
+          <div class="mock-site">
+            <div class="mock-head">
+              <div class="mock-logo">Ames Local<small>Sample news site · not a real publication</small></div>
+              <ul class="mock-menu" aria-hidden="true"><li>News</li><li>Sports</li><li>Food &amp; Drink</li><li>Events</li><li>Weather</li></ul>
+            </div>
+
+            <div class="mock-top">
+              <div class="ad-slot">
+                <span class="ad-label">Advertisement</span>
+                <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=728x90">
+                  <img src="welch-ad-728x90.png" srcset="welch-ad-728x90.png 1x, welch-ad-728x90@2x.png 2x" alt="Leaderboard ad: No cover. No catch. Welch Ave. Station, Campustown's lowest regular prices, free pool Monday through Wednesday. See specials." width="728" height="90">
+                </a>
+                <span class="ad-size">Leaderboard · 728 × 90</span>
+              </div>
+            </div>
+
+            <div class="mock-body">
+              <article class="mock-article">
+                <div class="mock-kicker">Sports · Campustown</div>
+                <h3>Game-day guide: where to watch Saturday's game in Campustown</h3>
+                <div class="mock-byline">By Staff Writer · 4 min read</div>
+                <div class="mock-photo" aria-hidden="true"><span>Photo</span></div>
+                <p>Kickoff is Saturday afternoon, and Campustown will be packed long before the first snap. If you don't have a ticket, Welch Avenue and Lincoln Way are lined with spots showing the game on big screens.</p>
+                <p>Plan ahead: many places fill up by mid-morning on game days, and most check IDs at the door. Lines move faster if you arrive before 11 a.m.</p>
+                <div class="mock-lines" aria-hidden="true"><i></i><i></i><i style="width: 82%"></i><i></i><i style="width: 64%"></i></div>
+                <p>Parking near campus is limited all day, so plan to walk, bike or take the bus. Most of Campustown is an easy walk from campus.</p>
+                <div class="mock-lines" aria-hidden="true"><i></i><i style="width: 90%"></i><i></i><i style="width: 55%"></i></div>
+              </article>
+
+              <aside class="mock-side" aria-label="Sample sidebar">
+                <div class="ad-slot">
+                  <span class="ad-label">Advertisement</span>
+                  <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=300x250">
+                    <img src="welch-ad-300x250.png" srcset="welch-ad-300x250.png 1x, welch-ad-300x250@2x.png 2x" alt="Medium rectangle ad: No cover. No catch. Campustown's lowest regular prices. Free pool Monday through Wednesday. See tonight's specials." width="300" height="250">
+                  </a>
+                  <span class="ad-size">Medium rectangle · 300 × 250</span>
+                </div>
+
+                <div class="mock-popular" aria-hidden="true">
+                  <div class="mock-kicker">Most read</div>
+                  <ol>
+                    <li>Weekend weather: sunny and mild for Saturday's game</li>
+                    <li>New coffee shop opens on Lincoln Way</li>
+                    <li>City council approves Campustown bike lanes</li>
+                  </ol>
+                </div>
+
+                <div class="ad-slot">
+                  <span class="ad-label">Advertisement</span>
+                  <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=300x600">
+                    <img src="welch-ad-300x600.png" srcset="welch-ad-300x600.png 1x, welch-ad-300x600@2x.png 2x" alt="Half page ad: No cover. No catch. Welch Ave. Station. Campustown's lowest regular prices and a deal every night. Free pool Monday through Wednesday. See tonight's specials." width="300" height="600">
+                  </a>
+                  <span class="ad-size">Half page · 300 × 600</span>
+                </div>
+              </aside>
+
+              <div class="mock-rail">
+                <div class="ad-slot">
+                  <span class="ad-label">Advertisement</span>
+                  <a href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=160x600">
+                    <img src="welch-ad-160x600.png" srcset="welch-ad-160x600.png 1x, welch-ad-160x600@2x.png 2x" alt="Wide skyscraper ad: No cover. No catch. Welch Ave. Station. Campustown's lowest regular prices. Tonight's specials." width="160" height="600">
+                  </a>
+                  <span class="ad-size">Wide skyscraper · 160 × 600</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="small" style="margin-top: 12px">Mock-up for this class project. "Ames Local" is a made-up site standing in for the local news, weather and sports placements in our targeting plan.</p>
       </div>
     </section>
 
@@ -260,24 +313,36 @@
           <h2 class="display h2" style="color: var(--royal)">Click the ad, land in the same place.</h2>
           <p class="lead">The landing page repeats the ad word for word, so nobody wonders if they clicked the right thing.</p>
         </div>
-        <div class="match">
-          <figure>
-            <img src="welch-ad-1200x628.png" alt="The master ad" width="1200" height="628" loading="lazy">
-            <figcaption class="small">The ad</figcaption>
-          </figure>
-          <figure>
-            <img src="landing-hero.png" alt="The top of the landing page, showing the same headline, photo, banner and gold button as the ad" width="1440" height="760" loading="lazy">
-            <figcaption class="small">The landing page</figcaption>
-          </figure>
-        </div>
+        <ol class="flow">
+          <li>
+            <span class="flow-num">1</span>
+            <div class="flow-media"><img src="welch-ad-300x250.png" alt="The medium rectangle ad as a visitor sees it on a local news site" width="300" height="250" loading="lazy"></div>
+            <h3>See the ad</h3>
+            <p>A 21+ visitor in Ames sees the ad on a local news, weather or sports site.</p>
+          </li>
+          <li>
+            <span class="flow-num">2</span>
+            <div class="flow-media flow-click">
+              <span class="flow-url">…/welchave/<b>landing.html</b>?utm_source=google &amp;utm_medium=display &amp;utm_campaign=no_cover_no_catch &amp;utm_content=<b>300x250</b></span>
+            </div>
+            <h3>Click it</h3>
+            <p>The click opens our landing page. Its UTM tag tells us which ad size sent the visit.</p>
+          </li>
+          <li>
+            <span class="flow-num">3</span>
+            <div class="flow-media"><img src="landing-hero.png" alt="The top of the landing page, with the same headline, photo, banner and gold button as the ad" width="1440" height="760" loading="lazy"></div>
+            <h3>Land in the same place</h3>
+            <p>The same headline, photo and gold button, then tonight's specials, hours and directions.</p>
+          </li>
+        </ol>
         <ul class="checks" style="margin-top: 28px">
           <li><span><strong>Same headline:</strong> "No cover. No catch." is the landing page's H1</span></li>
           <li><span><strong>Same offer and button:</strong> "See tonight's specials" opens today's specials automatically</span></li>
           <li><span><strong>Same look:</strong> polo-royal blue, the mural's painted banner, gold buttons, the same bartender photo</span></li>
-          <li><span><strong>Fixes from our audit:</strong> mobile-friendly, served over HTTPS on GitHub Pages, a nav bar, the Pizza Pit menu as real text, the phone and address on every screen</span></li>
+          <li><span><strong>Fixes from our audit:</strong> mobile-friendly, served over HTTPS on GitHub Pages, a nav bar, the phone and address on every screen</span></li>
         </ul>
         <div class="btn-row" style="margin-top: 28px">
-          <a class="btn btn-blue" href="landing.html">Open the landing page</a>
+          <a class="btn btn-blue" href="landing.html?utm_source=google&amp;utm_medium=display&amp;utm_campaign=no_cover_no_catch&amp;utm_content=300x250">Try it: open the landing page</a>
         </div>
       </div>
     </section>
@@ -289,7 +354,7 @@
           <li>Focus Digital, "Average Display Ad CTR: 2025 Benchmarks." <a href="https://focus-digital.co/average-display-ad-ctr-2025-benchmarks/">focus-digital.co</a></li>
           <li>Webtonic, "Google Display Network: Complete GDN Guide for Advertisers." <a href="https://www.webtonic.io/blog/google-display-network">webtonic.io</a></li>
           <li>Webtonic, "Google Ads in the Food Service &amp; Catering Industry: 2026 Statistics Roundup." <a href="https://www.webtonic.io/blog/food-service-catering-google-ads-statistics">webtonic.io</a></li>
-          <li>WordStream data via Saleslion, "Average conversion rate is 2.7% on Search and 0.89% on the Display Network" (2019). <a href="https://saleslion.io/sales-statistics/the-average-conversion-rate-on-google-search-and-display-network/">saleslion.io</a></li>
+          <li>WordStream data via Saleslion, "Average conversion rate is 2.7% on Search and 0.89% on the Display Network" (2019). <a href="https://saleslion.io/sales-statistics/the-average-conversion-rate-in-adwords-across-all-industries-is-2-7-on-the-search-network-and-0-89-on-the-display-network/">saleslion.io</a></li>
           <li>Welch Ave. Station specials, hours and facts: welchave.com and our group's Fall 2026 website audit. Pizza Pit prices: Pizza Pit Ames menu.</li>
         </ol>
       </div>
@@ -303,7 +368,7 @@
         <img src="dog-white.png" alt="" width="60" height="35">
         <div><strong>Welch Ave. Station</strong><br>Digital Marketing class project · Ivy College of Business · Fall 2026</div>
       </div>
-      <div><a href="index.html">Home</a> · <a href="landing.html">Landing</a> · <a href="ads.html">Ads</a></div>
+      <div><a href="index.html">Home</a> · <a href="ads.html">Ads</a> · <a href="landing.html">Landing</a></div>
     </div>
   </footer>
 </body>
