@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email | Welch Ave. Station Email Marketing</title>
+  <meta name="description" content="Join the Welch Ave. Station email list for a free slice of Pizza Pit pizza. Plus our list-building strategy and a preview of our weekly specials email.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Libre+Franklin:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="dog-white.png" alt="" width="56" height="33">
+        <span>Welch Ave. Station<small>Digital Marketing Project</small></span>
+      </a>
+      <nav aria-label="Project">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ads.html">Ads</a></li>
+          <li><a href="landing.html">Landing</a></li>
+          <li><a href="email.html" aria-current="page">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="stripe" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- STEP 1 · SIGN-UP FORM (above the fold) -->
+    <section id="signup" class="signup-hero">
+      <div class="container signup">
+        <div class="signup-copy">
+          <div class="eyebrow" style="color: var(--gold)">Step 1 · Website sign-up form</div>
+          <div class="banner"><strong>WELCH AVE. STATION</strong><span>— A Drinking Establishment —</span></div>
+          <!-- FILL IN: confirm the owner approves the free-slice offer and the birthday drink -->
+          <h1 class="display h1" style="font-size: clamp(38px, 5.4vw, 64px)">Join the list.<br><span class="gold">Get a free slice.</span></h1>
+          <p class="lead">Sign up and we'll email you a voucher for a free slice of Pizza Pit pizza, good at the bar on your next visit.</p>
+        </div>
+
+        <div class="signup-expect">
+          <h2 class="expect-title">What you'll get</h2>
+          <ul class="checks">
+            <li><span><strong>One email a week,</strong> Wednesday afternoons, with that week's specials</span></li>
+            <li><span><strong>Game-day deals and event alerts,</strong> never more than two emails a week</span></li>
+            <li><span><strong>A free drink on your birthday.</strong> We only ask for the month and day.</span></li>
+          </ul>
+        </div>
+
+        <div class="signup-card">
+          <form id="signup-form" novalidate>
+            <h2 class="form-title">Sign up for Welch emails</h2>
+            <p class="form-key"><span class="req">Required</span> fields are marked. Everything else is optional.</p>
+
+            <div class="field">
+              <label for="su-email">Email address <span class="req">Required</span></label>
+              <input id="su-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com" aria-describedby="su-email-err">
+              <p class="field-err" id="su-email-err" hidden>Enter an email address like name@example.com.</p>
+            </div>
+
+            <div class="field">
+              <label for="su-name">First name <span class="opt">Optional</span></label>
+              <input id="su-name" name="first_name" type="text" autocomplete="given-name" placeholder="So we can say hi">
+            </div>
+
+            <fieldset class="field">
+              <legend>Birthday <span class="opt">Optional</span> <span class="hint">for your free birthday drink</span></legend>
+              <div class="bday">
+                <label class="sr-only" for="su-month">Birth month</label>
+                <select id="su-month" name="birth_month">
+                  <option value="">Month</option>
+                  <option>January</option><option>February</option><option>March</option><option>April</option>
+                  <option>May</option><option>June</option><option>July</option><option>August</option>
+                  <option>September</option><option>October</option><option>November</option><option>December</option>
+                </select>
+                <label class="sr-only" for="su-day">Birth day</label>
+                <select id="su-day" name="birth_day"><option value="">Day</option></select>
+              </div>
+            </fieldset>
+
+            <div class="field check-field">
+              <input id="su-age" name="age_21" type="checkbox" required aria-describedby="su-age-err">
+              <label for="su-age">I'm 21 or older <span class="req">Required</span></label>
+              <p class="field-err" id="su-age-err" hidden>Our emails are for guests 21 and older.</p>
+            </div>
+
+            <button class="btn btn-gold signup-btn" type="submit">Send my free slice</button>
+
+            <p class="privacy-note"><strong>No spam, ever.</strong> We never sell or share your email, and every email has a one-click unsubscribe. After you sign up, we'll send a confirmation link to make sure it's really you (double opt-in). Your free-slice voucher arrives as soon as you confirm. <a href="#privacy-policy">Privacy policy</a></p>
+            <p class="demo-note-small">Class project demo: this form checks your entries but doesn't send or store anything.</p>
+          </form>
+
+          <div class="signup-done" id="signup-done" role="status" hidden>
+            <div class="done-icon" aria-hidden="true">✓</div>
+            <h2 class="form-title">Check your inbox</h2>
+            <p>We sent a confirmation link to <strong id="done-email">your email</strong>. Click it to confirm your subscription, and your free-slice voucher will arrive right after.</p>
+            <p class="small" style="color: var(--muted)">Don't see it? Check your Promotions or Spam folder.</p>
+            <p class="demo-note-small">Class project demo: no email was actually sent.</p>
+            <button class="btn btn-outline-dark" type="button" id="signup-again">Sign up another email</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <!-- STEP 2 · LIST-BUILDING STRATEGY -->
+    <section id="list-building" class="section bg-bone">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Step 2 · List-building strategy</div>
+          <h2 class="display h2" style="color: var(--royal)">Three groups, three ways in.</h2>
+          <p class="lead">We'll grow the list where our customers already are: at the bar, on Facebook, and on the sites where our display ads run. Every sign-up gets the same immediate reward, a free slice, so the offer is easy to promote everywhere.</p>
+        </div>
+
+        <div class="groups">
+          <article class="card group card-top">
+            <span class="tag">Group 1 · In person</span>
+            <h3>Customers in the bar</h3>
+            <div class="group-row">
+              <h4>Where &amp; how we collect it</h4>
+              <p><strong>Touchpoint:</strong> QR codes on table tents, coasters and the check presenter. The code opens the sign-up form at the top of this page.</p>
+              <p><strong>How we reach them:</strong> In person. Bartenders mention the free slice when someone opens a tab or shows their ID at the door.</p>
+            </div>
+            <div class="group-row">
+              <h4>Immediate value</h4>
+              <p>A free slice of Pizza Pit pizza, sent as soon as they confirm their email and good at the bar that same night.</p>
+            </div>
+            <div class="group-row">
+              <h4>Long-term value</h4>
+              <p>A free birthday drink, the week's specials every Wednesday, Pizza Pit deals and first word on events.</p>
+            </div>
+          </article>
+
+          <article class="card group card-top">
+            <span class="tag">Group 2 · Social</span>
+            <h3>Facebook followers</h3>
+            <div class="group-row">
+              <h4>Where &amp; how we collect it</h4>
+              <!-- FILL IN: confirm the giveaway prize (reserved game-day table for six) -->
+              <p><strong>Touchpoint:</strong> A pinned giveaway post and the Sign Up button on Welch's Facebook page: "Join our email list for a chance to win a reserved game-day table for you and five friends."</p>
+              <p><strong>How we reach them:</strong> Organic posts, a small boosted post shown to people 21+ within 5 miles of Campustown, and user-generated content: tag Welch in a photo for a bonus entry.</p>
+            </div>
+            <div class="group-row">
+              <h4>Immediate value</h4>
+              <p>Instant entry into that month's game-day table giveaway, plus the free-slice voucher.</p>
+            </div>
+            <div class="group-row">
+              <h4>Long-term value</h4>
+              <p>A subscriber-only giveaway every month, game-day deals and event reminders before they're posted on Facebook.</p>
+            </div>
+          </article>
+
+          <article class="card group card-top">
+            <span class="tag">Group 3 · Paid</span>
+            <h3>People who click our Google ads</h3>
+            <div class="group-row">
+              <h4>Where &amp; how we collect it</h4>
+              <p><strong>Touchpoint:</strong> Retargeting. People who clicked our "No cover. No catch." display ads and visited the <a href="landing.html">landing page</a> later see a second ad, "Join the list, get a free slice," that links straight to this sign-up form.</p>
+              <p><strong>How we reach them:</strong> Google Display Network remarketing, with the same 21+ Ames targeting as our display campaign.</p>
+            </div>
+            <div class="group-row">
+              <h4>Immediate value</h4>
+              <p>The free-slice voucher, plus this week's specials in their inbox right away.</p>
+            </div>
+            <div class="group-row">
+              <h4>Long-term value</h4>
+              <p>The week's specials every Wednesday so they never have to look them up, plus a free birthday drink.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3 · MAILBOX PREVIEW -->
+    <section id="email-preview" class="section bg-white">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Step 3 · Email preview</div>
+          <h2 class="display h2" style="color: var(--royal)">The weekly specials email.</h2>
+          <p class="lead">Sent to the whole list a few months after sign-up, on the Wednesday afternoon schedule our form promises. Here's how it looks in a subscriber's inbox.</p>
+        </div>
+
+        <dl class="em-facts">
+          <div><dt>From name</dt><dd>Welch Ave. Station</dd></div>
+          <div><dt>Subject line</dt><dd>Free pool and $1.50 pints this week <span class="muted">(7 words)</span></dd></div>
+          <div><dt>Preview text</dt><dd>Plus Top Shelf Thursday and Sunday S.I.N. No cover, ever.</dd></div>
+          <div><dt>Images off?</dt><dd>Still works. Every special, the greeting and the button are live text, and the photo has alt text.</dd></div>
+          <div><dt>Button links to</dt><dd>Our <a href="landing.html?utm_source=email&amp;utm_medium=email&amp;utm_campaign=weekly_specials#specials">landing page</a> (landing.html), opening on tonight's specials</dd></div>
+        </dl>
+
+        <div class="mailbox" id="inbox">
+          <div class="mb-top" aria-hidden="true">
+            <span class="mb-app">Mail</span>
+            <span class="mb-search">Search mail</span>
+            <span class="mb-avatar">T</span>
+          </div>
+          <div class="mb-body">
+            <ul class="mb-folders" aria-hidden="true">
+              <li class="on">Inbox <b>3</b></li>
+              <li>Starred</li>
+              <li>Snoozed</li>
+              <li>Sent</li>
+              <li>Drafts</li>
+              <li>Trash</li>
+            </ul>
+
+            <ul class="mb-list" aria-label="Inbox messages">
+              <li class="mb-row on unread">
+                <span class="mb-from">Welch Ave. Station</span><span class="mb-time">2:00 PM</span>
+                <span class="mb-subj">Free pool and $1.50 pints this week</span>
+                <span class="mb-pre">Plus Top Shelf Thursday and Sunday S.I.N. No cover, ever.</span>
+              </li>
+              <li class="mb-row unread">
+                <span class="mb-from">Group Project</span><span class="mb-time">1:12 PM</span>
+                <span class="mb-subj">Re: email.html draft</span>
+                <span class="mb-pre">I added the footer links. Can someone check it on a phone?</span>
+              </li>
+              <li class="mb-row unread">
+                <span class="mb-from">Roommate</span><span class="mb-time">11:40 AM</span>
+                <span class="mb-subj">Rent + groceries</span>
+                <span class="mb-pre">Venmo me when you get a chance, thanks!</span>
+              </li>
+              <li class="mb-row">
+                <span class="mb-from">Course Updates</span><span class="mb-time">Tue</span>
+                <span class="mb-subj">Exam 2 grades posted</span>
+                <span class="mb-pre">Grades for Exam 2 are now available.</span>
+              </li>
+            </ul>
+
+            <article class="mb-read" aria-label="Open email: Free pool and $1.50 pints this week">
+              <header class="mb-head">
+                <h3 class="mb-subject">Free pool and $1.50 pints this week</h3>
+                <div class="mb-meta">
+                  <span class="mb-sender-icon" aria-hidden="true"><img src="dog-white.png" alt="" width="28" height="16"></span>
+                  <div>
+                    <!-- FILL IN: confirm the sender address Welch would send from -->
+                    <div><strong>Welch Ave. Station</strong> <span class="muted">&lt;specials@welchave.com&gt;</span></div>
+                    <div class="muted">to Taylor · Wed, Feb 3, 2027, 2:00 PM</div>
+                  </div>
+                </div>
+              </header>
+
+              <!-- The email itself: 600px wide, every word is live text -->
+              <div class="em">
+                <div class="em-brandbar">
+                  <img src="dog-white.png" alt="" width="44" height="26">
+                  <span>Welch Ave. Station</span>
+                </div>
+                <img class="em-hero" src="bartender.jpg" alt="A Welch Ave. Station bartender handing a drink across the bar" width="1325" height="1020">
+
+                <div class="em-body">
+                  <h4 class="em-headline">Free pool. $1.50 pints.<br><span>No cover.</span></h4>
+                  <p>Hi Taylor,</p>
+                  <p>The semester's rolling, and so are the deals. There's still never a cover charge at Welch, and here's what's on this week:</p>
+
+                  <table class="em-week" role="presentation">
+                    <tr><th>Mon</th><td>$6 non-craft pitchers · free pool before &amp; after league</td></tr>
+                    <tr><th>Tue</th><td>$1.50 Busch Light &amp; High Life bottles · free pool open to close</td></tr>
+                    <tr><th>Wed</th><td>Pint Night: $1.50 Bud, Miller, Coors &amp; PBR · free pool until 8 p.m.</td></tr>
+                    <tr><th>Thu</th><td>Top Shelf Night: $5.25 doubles from 150+ liquors</td></tr>
+                    <tr><th>Fri</th><td>$4 Long Islands and daiquiris</td></tr>
+                    <tr><th>Sat</th><td>Doors at 11 a.m. · $7.50 non-craft pitchers until 8 p.m.</td></tr>
+                    <tr><th>Sun</th><td>S.I.N.: employee prices all day for anyone who works for tips</td></tr>
+                  </table>
+                  <p class="em-small">Happy hour runs every day from open to 8 p.m.</p>
+
+                  <p class="em-cta"><a class="em-btn" href="landing.html?utm_source=email&amp;utm_medium=email&amp;utm_campaign=weekly_specials#specials">See tonight's specials</a></p>
+
+                  <p><strong>Bring a friend.</strong> <a href="mailto:?subject=Free%20slice%20at%20Welch%20Ave.%20Station&amp;body=Join%20the%20Welch%20Ave.%20Station%20email%20list%20and%20get%20a%20free%20slice%20of%20Pizza%20Pit%20pizza%3A%20https%3A%2F%2Fjohnpezley.github.io%2Fwelchave%2Femail.html">Forward this email</a> to someone who'd love it. When they join the list, they get a free slice too.</p>
+                  <p>See you at the bar,<br>The crew at Welch Ave. Station</p>
+                  <p class="em-small">21+ only. ID checked at the door. Please drink responsibly.</p>
+                </div>
+
+                <!-- Branded footer -->
+                <footer class="em-footer">
+                  <div class="em-foot-brand">
+                    <img src="dog-white.png" alt="Welch Ave. Station logo" width="60" height="35">
+                    <div>
+                      <strong>Welch Ave. Station</strong>
+                      <span>No cover. No catch.</span>
+                    </div>
+                  </div>
+                  <!-- FILL IN: replace each href="#" with Welch's real Facebook and Instagram page links -->
+                  <div class="em-social">
+                    <a class="demo-link" href="#" aria-label="Welch Ave. Station on Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.5V21h3z"/></svg></a>
+                    <a class="demo-link" href="#" aria-label="Welch Ave. Station on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+                  </div>
+                  <p>207 Welch Ave., Ames, IA 50014<br>Questions? Reply to this email or call <a href="tel:+15152922334">(515) 292-2334</a>.</p>
+                  <p class="em-why">You're getting this because you joined the Welch Ave. Station email list on our website or at the bar.</p>
+                  <p class="em-links">
+                    <a href="mailto:?subject=Free%20slice%20at%20Welch%20Ave.%20Station&amp;body=Join%20the%20Welch%20Ave.%20Station%20email%20list%20and%20get%20a%20free%20slice%20of%20Pizza%20Pit%20pizza%3A%20https%3A%2F%2Fjohnpezley.github.io%2Fwelchave%2Femail.html">Forward to a friend</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#privacy-policy">Privacy policy</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#unsubscribe">Unsubscribe</a>
+                  </p>
+                  <p class="em-copy">© 2027 Welch Ave. Station</p>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pop-ups opened by the privacy policy and unsubscribe links (no JavaScript needed) -->
+  <div class="overlay" id="privacy-policy" role="dialog" aria-labelledby="pp-title">
+    <div class="overlay-box">
+      <h2 id="pp-title" class="form-title">Privacy policy</h2>
+      <p>Welch Ave. Station collects your email address and, if you choose, your first name and birthday (month and day only). We use them only to send the emails you signed up for and your birthday offer.</p>
+      <p>We never sell, rent or share your information. Every email includes a one-click unsubscribe link, and you can ask us to delete your information anytime by calling <a href="tel:+15152922334">(515) 292-2334</a> or replying to any email.</p>
+      <p class="demo-note-small">Sample policy for a class project.</p>
+      <a class="btn btn-gold" href="#inbox">Close</a>
+    </div>
+  </div>
+
+  <div class="overlay" id="unsubscribe" role="dialog" aria-labelledby="un-title">
+    <div class="overlay-box">
+      <h2 id="un-title" class="form-title">You're unsubscribed</h2>
+      <p>You won't get any more emails from Welch Ave. Station. It took one click, with no login required.</p>
+      <fieldset class="exit-survey">
+        <legend>Mind telling us why? (Optional)</legend>
+        <label><input type="radio" name="why"> Too many emails</label>
+        <label><input type="radio" name="why"> The deals aren't for me</label>
+        <label><input type="radio" name="why"> I moved away from Ames</label>
+        <label><input type="radio" name="why"> I never signed up</label>
+      </fieldset>
+      <p>Changed your mind? <a href="#signup">Sign up again</a> anytime.</p>
+      <p class="demo-note-small">Class project demo: this shows what a subscriber sees after clicking Unsubscribe.</p>
+      <a class="btn btn-gold" href="#inbox">Close</a>
+    </div>
+  </div>
+
+  <div class="stripe" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand-line">
+        <img src="dog-white.png" alt="" width="60" height="35">
+        <div><strong>Welch Ave. Station</strong><br>Digital Marketing class project · Ivy College of Business · Fall 2026</div>
+      </div>
+      <div><a href="index.html">Home</a> · <a href="ads.html">Ads</a> · <a href="landing.html">Landing</a> · <a href="email.html">Email</a></div>
+    </div>
+  </footer>
+
+  <script>
+    /* Sign-up form: checks the entries, then shows the double opt-in message. Nothing is sent or stored. */
+    (function () {
+      "use strict";
+      var form = document.getElementById("signup-form");
+      var done = document.getElementById("signup-done");
+      var email = document.getElementById("su-email");
+      var age = document.getElementById("su-age");
+      var day = document.getElementById("su-day");
+
+      for (var d = 1; d <= 31; d++) {
+        var opt = document.createElement("option");
+        opt.textContent = d;
+        day.appendChild(opt);
+      }
+
+      function check(input, errId) {
+        var ok = input.checkValidity();
+        document.getElementById(errId).hidden = ok;
+        input.setAttribute("aria-invalid", ok ? "false" : "true");
+        return ok;
+      }
+
+      email.addEventListener("blur", function () { if (email.value) check(email, "su-email-err"); });
+      age.addEventListener("change", function () { check(age, "su-age-err"); });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var okEmail = check(email, "su-email-err");
+        var okAge = check(age, "su-age-err");
+        if (!okEmail) { email.focus(); return; }
+        if (!okAge) { age.focus(); return; }
+        document.getElementById("done-email").textContent = email.value;
+        form.hidden = true;
+        done.hidden = false;
+        done.querySelector("h2").setAttribute("tabindex", "-1");
+        done.querySelector("h2").focus();
+      });
+
+      document.getElementById("signup-again").addEventListener("click", function () {
+        form.reset();
+        done.hidden = true;
+        form.hidden = false;
+        email.focus();
+      });
+
+      // Social icons in the sample email are placeholders
+      Array.prototype.forEach.call(document.querySelectorAll(".demo-link"), function (a) {
+        a.addEventListener("click", function (e) { e.preventDefault(); });
+      });
+    })();
+  </script>
+</body>
+</html>
